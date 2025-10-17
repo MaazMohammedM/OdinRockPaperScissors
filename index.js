@@ -1,39 +1,21 @@
-console.log('Working');
+
 
 function getComputerChoice() {
-    let randomNum = Math.round(Math.random() * 2);
+    let randomNum = Math.floor(Math.random() * 3);
     switch (randomNum) {
         case 0:
-            if (randomNum === 0) {
-                return 'Rock'
-            }
-            break;
+            return 'Rock';
         case 1:
-            if (randomNum === 1) {
-                return 'Paper';
-
-            }
-            break;
+            return 'Paper';
         case 2:
-            if (randomNum === 2) {
-                return 'Scissors';
-            }
-            break;
+            return 'Scissors';
     }
 }
 
 function getHumanChoice() {
-    let humanInput = prompt("Rock Paper Scissors ???");
-    let inputFirstPart = humanInput.slice(0, 1).toUpperCase();
-    let inputSecondPart = humanInput.slice(1).toLowerCase();
-    humanInput = inputFirstPart.concat(inputSecondPart);
-    return humanInput;
+    let humanInput = prompt("Rock Paper Scissors ???").toLowerCase();
+    return humanInput.charAt(0).toUpperCase() + humanInput.slice(1);
 }
-console.log(getHumanChoice())
-
-
-
-
 
 
 
